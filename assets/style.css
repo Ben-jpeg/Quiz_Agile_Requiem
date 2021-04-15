@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+nav a {
+    color: #666;
+    font-weight: 400;
+    margin: 1rem;
+    position: relative;
+}
+
+nav a:hover {
+    color: #666;
+    text-decoration: none;
+    /* border-bottom: 3px solid #0C31F1; */
+}
+
+nav a:hover:after {
+    content: "";
+    width: 60%;
+    height: 3px;
+    background-color: #3751FE;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #3751FE;
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+#bloc-centre h1 {
+    padding-top: 10%;
+    margin-bottom: 10%;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+}
+
+form input {
+    border-radius: 0 !important;
+    font-weight: 500;
+    color: #3751FE !important;
+}
+
+form input[type="password"] {
+    font-family: caption;
+}
+
+form label {
+    /* position: absolute; */
+    margin: 0;
+    margin-left: .95rem;
+    margin-top: .375rem;
+    color: rgba(0, 0, 0, 0.61);
+}
+
+.form-control {
+    height: 60px;
+    width: 50vw;
+    padding: 1.5rem .75rem .375rem .9rem !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border-color: #ced4da;
+    border-left: 3px solid #0C31F1;
+    padding-left: calc(.95rem - 3px) !important;
+}
+
+#button-group {
+    width: 100%;
+    display: flex;
+}
+
+button {
+    margin: 0 .95rem;
+}
+
+button:focus,
+button:hover {
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+#bloc-droite,
+#bloc-gauche {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bloc-droite {
+    right: 0;
+    background-color: #eee;
+}
+
+#bloc-droite img {
+    width: 100%;
+}
+
+#bloc-gauche {
+    left: 0;
+    flex-direction: column;
+}
+
+#bloc-centre {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(238, 238, 238, 1) 50%, rgba(238, 238, 238, 1) 100%);
+    width: 100vw;
+    /* height: 100vh; */
+    padding: 1rem 4rem;
+}
+
+#bloc-centre p {
+    background: #FFFFFF;
+    border: 1px solid rgba(55, 81, 254, 0.61);
+    padding: .375rem 1rem;
+}
+
+#bloc-centre img {
+    width: 30%;
+    min-width: 250px;
+    position: absolute;
+}
+
+.reponse {
+    margin: 0 1.5rem;
+    text-align: center;
+}
+
+.definition {
+    color: rgb(6, 21, 226);
+    font-size: larger;
+    text-align: center;
+}
