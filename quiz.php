@@ -10,7 +10,7 @@
    require 'database/connexion_bdd.php';
 
     // Affiche 1 définition aléatoire de la base de données
-    // $requete = $bdd->query("SELECT * FROM  `words`  ORDER BY ID ASC LIMIT 1");
+
     $requete = $bdd->query("SELECT * FROM  `words` ORDER BY rand() LIMIT 1");
     
     $definition = $requete->fetch();
@@ -60,7 +60,7 @@ session_start();
 
     if ($_POST["reponse"] != $bonne_reponse){
       
-        echo "Mauvaise réponse";
+        echo "<p style=color:red;font-weight:bold;font-size:25px;text-align:center>Mauvaise réponse</p>";
         echo "<br>";
 
         // header( "refresh:5;" ); Rafraichit automatiquement la page après un délai
@@ -70,7 +70,7 @@ session_start();
         // echo '<br>';
         // echo $bonne_reponse;
     } else {
-        echo "Bonne réponse" ;
+        echo "<p style=color:green;font-weight:bold;font-size:25px;text-align:center>Bonne réponse</p>" ;
         echo "<br>";
     }
   }
@@ -86,13 +86,11 @@ session_start();
   echo $_SESSION['counter'];
   //formulaire FIN --->
 
-  if($_SESSION['counter']>=5){
+  if($_SESSION['counter']>=10){
     session_destroy();
     $_SESSION['counter'] = 0;
 
   }
-  
-
     ?>
   </div>
 
